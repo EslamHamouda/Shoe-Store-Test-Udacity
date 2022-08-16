@@ -6,7 +6,9 @@
     <data>
 
     </data>
-
+<!--this is activity layout and container fragment used to host login fragment
+    instruction fragment welcome fragment shoe list fragment
+    and shoe detail fragment-->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
         android:name="androidx.navigation.fragment.NavHostFragment"

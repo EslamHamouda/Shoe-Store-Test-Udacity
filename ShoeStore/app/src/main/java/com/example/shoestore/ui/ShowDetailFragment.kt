@@ -34,7 +34,7 @@ class ShowDetailFragment : Fragment() {
         binding.cancel.setOnClickListener{
             view?.findNavController()?.navigate(ShowDetailFragmentDirections.actionShowDetailFragmentToShoeListFragment())
         }
-        viewModel= ViewModelProvider(requireActivity()).get(ViewModel::class.java)
+        viewModel= ViewModelProvider(requireActivity())[ViewModel::class.java]
         binding.save.setOnClickListener{
             try {
                 val name=binding.shoeName.text.toString()

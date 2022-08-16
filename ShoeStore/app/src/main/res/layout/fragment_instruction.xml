@@ -6,7 +6,8 @@
     <data>
 
     </data>
-
+    <!--This is constraint layout viewGroup used to position imageView
+    textView and button in fragment instruction layout-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
