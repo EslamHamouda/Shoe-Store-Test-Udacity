@@ -60,7 +60,7 @@ class ShoeListFragment : Fragment() {
     }
 
     @SuppressLint("SetTextI18n")
-    fun createText(name:String, company:String, size:Double, description:String){
+    fun createText(name:String, company:String, size:Int, description:String){
         val text = TextView(requireContext())
         text.setPadding(20, 5, 5, 5)
         val params: LinearLayout.LayoutParams = LinearLayout.LayoutParams(

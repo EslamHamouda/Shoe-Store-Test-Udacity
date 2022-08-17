@@ -35,18 +35,14 @@ class ShowDetailFragment : Fragment() {
             view?.findNavController()?.navigate(ShowDetailFragmentDirections.actionShowDetailFragmentToShoeListFragment())
         }
         viewModel= ViewModelProvider(requireActivity())[ViewModel::class.java]
+        binding.viewModel=viewModel
+        binding.lifecycleOwner=this
         binding.save.setOnClickListener{
-            try {
-                val name=binding.shoeName.text.toString()
-                val company=binding.shoeCompany.text.toString()
-                val size=binding.shoeSize.text.toString().toDouble()
-                val description=binding.shoeDescription.text.toString()
-                val model=ShoeModel(name,company,size,description)
-                viewModel.addShoe(model)
+
+
+                viewModel.addShoe()
                 Toast.makeText(requireContext(), "Done", Toast.LENGTH_SHORT).show()
-            }catch (e:NumberFormatException){
-                Toast.makeText(requireContext(),"Can't be empty",Toast.LENGTH_SHORT).show()
-            }
+
         }
         return binding.root
     }

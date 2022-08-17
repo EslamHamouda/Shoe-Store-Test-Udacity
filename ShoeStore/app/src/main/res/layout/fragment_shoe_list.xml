@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+<variable
+    name="viewModel"
+    type="com.example.shoestore.viewmodel.ViewModel" />
     </data>
 <!--Constraint layout to position the toolbar on the top of the
 fragment, scroll view to scroll content exist in the linear layout-->
@@ -44,7 +46,9 @@ fragment, scroll view to scroll content exist in the linear layout-->
                 android:id="@+id/linear"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"/>
+                android:orientation="vertical">
+
+            </LinearLayout>
         </ScrollView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton

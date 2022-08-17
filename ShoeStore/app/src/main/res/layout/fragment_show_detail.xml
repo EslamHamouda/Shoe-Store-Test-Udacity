@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+<variable
+    name="viewModel"
+    type="com.example.shoestore.viewmodel.ViewModel" />
     </data>
     <!--This is constraint layout viewGroup used to position other
     labels, editTexts, buttons and it's size in fragment shoe detail layout file-->
@@ -50,6 +52,7 @@
             android:background="@drawable/edittextstyle"
             android:elevation="6dp"
             android:ems="10"
+            android:text="@={viewModel.name}"
             android:fontFamily="@font/inter"
             android:hint="Shoe name"
             android:inputType="textPersonName"
@@ -82,6 +85,7 @@
             android:background="@drawable/edittextstyle"
             android:elevation="6dp"
             android:ems="10"
+            android:text="@={viewModel.company}"
             android:fontFamily="@font/inter"
             android:hint="Shoe company"
             android:inputType="textPersonName"
@@ -114,6 +118,7 @@
             android:background="@drawable/edittextstyle"
             android:elevation="6dp"
             android:ems="10"
+            android:text="@={viewModel.size}"
             android:fontFamily="@font/inter"
             android:hint="38"
             android:inputType="numberSigned"
@@ -146,6 +151,7 @@
             android:background="@drawable/edittextstyle"
             android:elevation="6dp"
             android:ems="10"
+            android:text="@={viewModel.description}"
             android:fontFamily="@font/inter"
             android:hint="Description"
             android:inputType="textMultiLine"
