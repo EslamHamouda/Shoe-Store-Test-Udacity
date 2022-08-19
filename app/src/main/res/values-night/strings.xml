@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome_to_shoe_store">Welcome to Shoe Store</string>
+    <string name="next">Next</string>
+    <string name="image_instruction">image_instruction</string>
+    <string name="choose_from_our_exiting_shoe">Choose from our exiting shoe</string>
+    <string name="adding_a_new_shoe_to_shop">Adding a new shoe to shop</string>
+    <string name="start">Start</string>
+    <string name="log_out">Log out</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+</resources>
