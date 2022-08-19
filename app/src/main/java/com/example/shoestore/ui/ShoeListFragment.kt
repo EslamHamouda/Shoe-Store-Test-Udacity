@@ -3,11 +3,10 @@ package com.example.shoestore.ui
 import android.annotation.SuppressLint
 import android.graphics.Typeface
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -21,6 +20,9 @@ import com.example.shoestore.viewmodel.ViewModel
 class ShoeListFragment : Fragment() {
     lateinit var binding: FragmentShoeListBinding
     lateinit var viewModel: ViewModel
+   // lateinit var menuInflater:MenuInflater
+    lateinit var menu:Menu
+    lateinit var menui:MenuItem
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -54,9 +56,9 @@ class ShoeListFragment : Fragment() {
             for (shoe in it) {
                 createText(shoe.name, shoe.company, shoe.size, shoe.description)
             }
-
         }
     }
+
 
     @SuppressLint("SetTextI18n")
     fun createText(name:String, company:String, size:Int, description:String){

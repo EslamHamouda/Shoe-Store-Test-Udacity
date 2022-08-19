@@ -5,7 +5,7 @@
 
     <data>
 <variable
-    name="viewModel"
+    name="viewModels"
     type="com.example.shoestore.viewmodel.ViewModel" />
     </data>
     <!--This is constraint layout viewGroup used to position other
@@ -52,7 +52,7 @@
             android:background="@drawable/edittextstyle"
             android:elevation="6dp"
             android:ems="10"
-            android:text="@={viewModel.name}"
+            android:text="@={viewModels.name}"
             android:fontFamily="@font/inter"
             android:hint="Shoe name"
             android:inputType="textPersonName"
@@ -85,7 +85,7 @@
             android:background="@drawable/edittextstyle"
             android:elevation="6dp"
             android:ems="10"
-            android:text="@={viewModel.company}"
+            android:text="@={viewModels.company}"
             android:fontFamily="@font/inter"
             android:hint="Shoe company"
             android:inputType="textPersonName"
@@ -118,7 +118,7 @@
             android:background="@drawable/edittextstyle"
             android:elevation="6dp"
             android:ems="10"
-            android:text="@={viewModel.size}"
+            android:text="@={viewModels.size}"
             android:fontFamily="@font/inter"
             android:hint="38"
             android:inputType="numberSigned"
@@ -151,7 +151,7 @@
             android:background="@drawable/edittextstyle"
             android:elevation="6dp"
             android:ems="10"
-            android:text="@={viewModel.description}"
+            android:text="@={viewModels.description}"
             android:fontFamily="@font/inter"
             android:hint="Description"
             android:inputType="textMultiLine"
