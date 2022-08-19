@@ -47,7 +47,10 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         flag=args.flag
         if (flag==0) {
+           isFirstRun=true
             moveToLogin()
+
+
         }
     }
 

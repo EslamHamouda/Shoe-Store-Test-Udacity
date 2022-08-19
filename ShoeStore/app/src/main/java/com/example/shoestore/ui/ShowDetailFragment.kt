@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.shoestore.R
@@ -19,7 +21,7 @@ import java.lang.NumberFormatException
 
 class ShowDetailFragment : Fragment() {
     lateinit var binding: FragmentShowDetailBinding
-    lateinit var viewModel: ViewModel
+    val viewModel by activityViewModels<ViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -34,15 +36,14 @@ class ShowDetailFragment : Fragment() {
         binding.cancel.setOnClickListener{
             view?.findNavController()?.navigate(ShowDetailFragmentDirections.actionShowDetailFragmentToShoeListFragment())
         }
-        viewModel= ViewModelProvider(requireActivity())[ViewModel::class.java]
-        binding.viewModel=viewModel
-        binding.lifecycleOwner=this
-        binding.save.setOnClickListener{
 
-
+        with(binding){
+            viewModels=viewModel
+            lifecycleOwner=requireActivity()
+            save.setOnClickListener{
                 viewModel.addShoe()
                 Toast.makeText(requireContext(), "Done", Toast.LENGTH_SHORT).show()
-
+            }
         }
         return binding.root
     }
