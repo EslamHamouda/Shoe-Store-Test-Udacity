@@ -21,8 +21,8 @@ class ShoeListFragment : Fragment() {
     lateinit var binding: FragmentShoeListBinding
     lateinit var viewModel: ViewModel
    // lateinit var menuInflater:MenuInflater
-    lateinit var menu:Menu
-    lateinit var menui:MenuItem
+    //lateinit var menu:Menu
+    //lateinit var menui:MenuItem
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
